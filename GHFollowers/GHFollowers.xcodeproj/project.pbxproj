@@ -15,6 +15,7 @@
 		41C1275327D7A41D008C2E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C1275127D7A41D008C2E4F /* LaunchScreen.storyboard */; };
 		41C1275B27D7BD7C008C2E4F /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C1275A27D7BD7C008C2E4F /* SearchVC.swift */; };
 		41C1275D27D7BD8C008C2E4F /* FriendListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C1275C27D7BD8C008C2E4F /* FriendListVC.swift */; };
+		41C6084727DCC0B1008F9951 /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6084627DCC0B1008F9951 /* FollowersListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		41C1275427D7A41D008C2E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41C1275A27D7BD7C008C2E4F /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		41C1275C27D7BD8C008C2E4F /* FriendListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListVC.swift; sourceTree = "<group>"; };
+		41C6084627DCC0B1008F9951 /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				41C1274627D7A419008C2E4F /* AppDelegate.swift */,
 				41C1274827D7A419008C2E4F /* SceneDelegate.swift */,
 				41C1275A27D7BD7C008C2E4F /* SearchVC.swift */,
+				41C6084627DCC0B1008F9951 /* FollowersListVC.swift */,
 				417DC94227D94AD3003D51EF /* GFButton.swift */,
 				417DC94427D94AF2003D51EF /* GFTextField.swift */,
 				41C1275C27D7BD8C008C2E4F /* FriendListVC.swift */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C6084727DCC0B1008F9951 /* FollowersListVC.swift in Sources */,
 				417DC94527D94AF2003D51EF /* GFTextField.swift in Sources */,
 				41C1275B27D7BD7C008C2E4F /* SearchVC.swift in Sources */,
 				417DC94327D94AD3003D51EF /* GFButton.swift in Sources */,
