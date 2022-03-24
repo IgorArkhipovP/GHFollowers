@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		415C684D27E8B11E0076E301 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415C684C27E8B11E0076E301 /* GFAvatarImageView.swift */; };
+		415C685027E8B3A70076E301 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415C684F27E8B3A70076E301 /* FollowerCell.swift */; };
 		41703FD827E0F481007D7F4B /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41703FD727E0F481007D7F4B /* ErrorMessage.swift */; };
 		41703FDB27E0F4BF007D7F4B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41703FDA27E0F4BF007D7F4B /* NetworkManager.swift */; };
 		417DC94327D94AD3003D51EF /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC94227D94AD3003D51EF /* GFButton.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		415C684C27E8B11E0076E301 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		415C684F27E8B3A70076E301 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		41703FD727E0F481007D7F4B /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		41703FDA27E0F4BF007D7F4B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		417DC94227D94AD3003D51EF /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
@@ -61,6 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		415C684E27E8B1CF0076E301 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				41C0971027DE56BC000B1F57 /* GFTitleLabel.swift */,
+				41C0971227DE5819000B1F57 /* GFBodyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		415C685127E8B3AD0076E301 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				415C684F27E8B3A70076E301 /* FollowerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		41703FD627E0F46A007D7F4B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,17 +119,18 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		41AA576F27DF8EA4002E4FFA /* View */ = {
+		41AA576F27DF8EA4002E4FFA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				41C0971027DE56BC000B1F57 /* GFTitleLabel.swift */,
-				41C0971227DE5819000B1F57 /* GFBodyLabel.swift */,
+				415C685127E8B3AD0076E301 /* Cells */,
+				415C684E27E8B1CF0076E301 /* Labels */,
+				415C684C27E8B11E0076E301 /* GFAvatarImageView.swift */,
 				41C0971427DE5909000B1F57 /* GFAlertContainerView.swift */,
 				41C0971627DE5A5B000B1F57 /* GFAlertVC.swift */,
 				417DC94227D94AD3003D51EF /* GFButton.swift */,
 				417DC94427D94AF2003D51EF /* GFTextField.swift */,
 			);
-			path = View;
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		41AA577027DF8EE1002E4FFA /* Extensions */ = {
@@ -151,7 +173,7 @@
 				41703FD627E0F46A007D7F4B /* Utilities */,
 				41AA577127DF950A002E4FFA /* Model */,
 				41AA577027DF8EE1002E4FFA /* Extensions */,
-				41AA576F27DF8EA4002E4FFA /* View */,
+				41AA576F27DF8EA4002E4FFA /* CustomView */,
 				41AA576E27DF8E69002E4FFA /* Controllers */,
 				41AA576C27DF8E4C002E4FFA /* Support */,
 				41C1275427D7A41D008C2E4F /* Info.plist */,
@@ -240,7 +262,9 @@
 				41703FD827E0F481007D7F4B /* ErrorMessage.swift in Sources */,
 				41C0971727DE5A5B000B1F57 /* GFAlertVC.swift in Sources */,
 				417DC94327D94AD3003D51EF /* GFButton.swift in Sources */,
+				415C685027E8B3A70076E301 /* FollowerCell.swift in Sources */,
 				41C1274727D7A419008C2E4F /* AppDelegate.swift in Sources */,
+				415C684D27E8B11E0076E301 /* GFAvatarImageView.swift in Sources */,
 				41C1275D27D7BD8C008C2E4F /* FriendListVC.swift in Sources */,
 				41C0971927DEA301000B1F57 /* UIViewController + Ext .swift in Sources */,
 				41C0971527DE5909000B1F57 /* GFAlertContainerView.swift in Sources */,
