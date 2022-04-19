@@ -30,8 +30,9 @@ class FollowersListVC: UIViewController, UICollectionViewDelegate, UICollectionV
         getFollowers(username: username, page: page)
         configureSearchController()
         filteredFollowers = followers
-        
         collectionView?.delegate = self
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,16 +48,41 @@ class FollowersListVC: UIViewController, UICollectionViewDelegate, UICollectionV
     }
     
     @objc func addButtonTapped(){
-        print("everything is ok")
+        imageViewOfLoadingIcon()
+        
+        NetworkManager.shared.getUser(for: username) { [weak self] result in
+            guard let self = self else { return }
+            self.dismissImageViewOfLoadingIcon()
+            
+            switch result {
+            case .success(let user):
+                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                
+                PersitenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
+                    guard let self = self else { return }
+                    
+                    guard let error = error else {
+                        self.presentAlertControllerOnMainThread(title: "Success!", messageBody: "You have successfully favorited this user 🎉", buttonTitle: "Hooray!")
+                        return
+                    }
+                    
+                    self.presentAlertControllerOnMainThread(title: "Something went wrong", messageBody: error.rawValue, buttonTitle: "Ok")
+                }
+                
+            case .failure(let error):
+                self.presentAlertControllerOnMainThread(title: "Something went wrong", messageBody: error.rawValue, buttonTitle: "Ok")
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        followers.count ?? 0
+        followers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as? FollowerCell else {return UICollectionViewCell()}
-        cell.set(follower: followers[indexPath.item])
+        let follower = followers[indexPath.row]
+        cell.set(follower: follower)
         return cell
     }
         

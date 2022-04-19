@@ -11,7 +11,7 @@ class SearchVC: UIViewController {
     
     var logoImageView = UIImageView()
     let userNameTextField = GFTextField()
-    let getFollowersButton = GFButton(backgroundColor: .systemGreen, title: "Get followers")
+    let getFollowersButton = GFButton(color: .systemGreen, title: "Get followers")
     
     let ghLogo = "gh-logo"
     

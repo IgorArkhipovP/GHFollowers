@@ -18,23 +18,30 @@ class GFButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backgroundColor: UIColor, title: String) {
-        super.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal)
-        configureButton()
+    convenience init(color: UIColor, title: String) {
+        self.init(frame: .zero)
+        setConfigurationOfButton(color: color, titleLabel: title)
     }
     
     private func configureButton(){
         translatesAutoresizingMaskIntoConstraints = false
         
-        layer.cornerRadius = 10
-        setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        configuration = .tinted()
+        configuration?.cornerStyle = .medium
+        
+        //MARK: New button style in iOS15
+//        layer.cornerRadius = 10
+//        setTitleColor(.white, for: .normal)
+//        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
     }
     
-    func setConfigurationOfButton(backgroundColor: UIColor, titleLabel: String) {
-    self.backgroundColor = backgroundColor
-    setTitle(titleLabel, for: .normal)
+    final func setConfigurationOfButton(color: UIColor, titleLabel: String) {
+        
+        configuration?.baseBackgroundColor = color
+        configuration?.baseForegroundColor = color
+        configuration?.title = titleLabel
+        
+//    self.backgroundColor = backgroundColor
+//    setTitle(titleLabel, for: .normal)
     }
 }
